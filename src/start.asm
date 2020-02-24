@@ -47,6 +47,10 @@ start:
 	ld hl, _VRAM
 	ld c, 75
 	call copy_1bpp
+	call clear_screen0
+
+	call fill_initial_ground
+
 	call enable_lcd
 	ld a, [rIE]
 	or IEF_VBLANK

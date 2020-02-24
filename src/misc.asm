@@ -32,3 +32,13 @@ endr
 	dec c
 	jr nz, copy_1bpp
 	ret
+
+clear_screen0::
+	ld hl, _SCRN0
+.loop
+	ld a, $FF
+	ld [hli], a
+	ld a, h
+	cp $9C
+	jr nz, .loop
+	ret
