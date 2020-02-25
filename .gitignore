@@ -1,0 +1,6 @@
+out/
+*.1bpp
+*.2bpp
+dino.gb
+dino.map
+dino.sym
