@@ -26,7 +26,7 @@ $(OBJDIR)/%.1bpp: %.1bpp.png
 $(OBJDIR)/src/graphics.o: $(GFXOBJECTS)
 
 $(ROM_NAME): $(OBJECTS)
-	$(LINK) -o $@.gb -n $@.sym $(OBJECTS)
+	$(LINK) -o $@.gb -n $@.sym -m $@.map $(OBJECTS)
 	$(FIX) $(FIX_FLAGS) $@.gb
 
 clean:
